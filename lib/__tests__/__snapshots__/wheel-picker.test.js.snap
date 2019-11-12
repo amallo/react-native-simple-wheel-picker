@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders snapshot 1`] = `
+<View
+  style={
+    Object {
+      "height": 400,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "purple",
+        "height": 5,
+        "left": 40,
+        "position": "absolute",
+        "right": 40,
+        "top": 200,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "purple",
+        "height": 5,
+        "left": 40,
+        "position": "absolute",
+        "right": 40,
+        "top": 240,
+      }
+    }
+  />
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignItems": "center",
+        "borderColor": "red",
+        "borderWidth": 2,
+        "justifyContent": "center",
+      }
+    }
+    decelerationRate={0.999}
+    snapToInterval={40}
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        Choose
+      </Text>
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        Portugal
+      </Text>
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        England
+      </Text>
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        Portugal
+      </Text>
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        England
+      </Text>
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        Portugal
+      </Text>
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        England
+      </Text>
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        Portugal
+      </Text>
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        England
+      </Text>
+      <Text
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      >
+        England
+      </Text>
+      <View
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "green",
+            "borderWidth": 1,
+            "height": 40,
+            "textAlign": "center",
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;

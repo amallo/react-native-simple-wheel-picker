@@ -8,14 +8,15 @@
 
 import React, {Component} from 'react';
 import {ScrollView, Text, View, StyleSheet} from 'react-native';
+import WheelPicker from 'lib/wheel-picker';
 
-const itemSize = 40
+const itemSize = 40;
 const styles = StyleSheet.create({
-  item : {
+  item: {
     height: itemSize,
     borderWidth: 1,
     borderColor: 'green',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   upperSeparator: {
     position: 'absolute',
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'purple',
     top: itemSize * 5,
     left: itemSize,
-    right: itemSize
+    right: itemSize,
   },
   lowerSeparator: {
     position: 'absolute',
@@ -31,9 +32,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'purple',
     left: 40,
     right: 40,
-    top: (itemSize * 5) + itemSize,
-  }
-})
+    top: itemSize * 5 + itemSize,
+  },
+});
 
 class App extends Component {
   render() {
@@ -42,7 +43,7 @@ class App extends Component {
         <View style={styles.upperSeparator} />
         <View style={styles.lowerSeparator} />
         <ScrollView
-            decelerationRate={ 0.999}
+          decelerationRate={0.999}
           snapToInterval={itemSize}
           contentContainerStyle={{
             borderColor: 'red',
