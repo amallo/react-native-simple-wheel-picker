@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {ScrollView, Text, View, StyleSheet} from 'react-native';
-import WheelPicker from 'lib/wheel-picker';
+import {WheelPicker} from 'react-native-simple-wheel-picker';
 
 const itemSize = 40;
 const styles = StyleSheet.create({
