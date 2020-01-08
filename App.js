@@ -6,12 +6,12 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {ScrollView, Text, View, StyleSheet} from 'react-native';
+import React, { Component } from 'react';
+import { ScrollView, Text, View, StyleSheet } from 'react-native';
 
 const itemSize = 40
 const styles = StyleSheet.create({
-  item : {
+  item: {
     height: itemSize,
     borderWidth: 1,
     borderColor: 'green',
@@ -38,11 +38,11 @@ const styles = StyleSheet.create({
 class App extends Component {
   render() {
     return (
-      <View style={{height: 400}}>
+      <View style={{ height: 400 }}>
         <View style={styles.upperSeparator} />
         <View style={styles.lowerSeparator} />
         <ScrollView
-            decelerationRate={ 0.999}
+          decelerationRate={0.999}
           snapToInterval={itemSize}
           contentContainerStyle={{
             borderColor: 'red',
