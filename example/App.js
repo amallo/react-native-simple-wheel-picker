@@ -1,42 +1,33 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet } from 'react-native';
 
 const itemSize = 40;
-const countItem = 10;
-const visibleItem = 10;
-const marginHorizontal = 40
+const countItem = 100;
+const visibleItem = 4;
+const marginHorizontal = 20
 const visibleHeight = visibleItem * itemSize;
-const separatorSize = 5
+const separatorSize = 1
 
 const DATA = [...Array(countItem).keys()].map((index) => `P${index}`)
 
 const styles = StyleSheet.create({
   item: {
-    width: '100%',
     height: itemSize,
-    borderWidth: 1,
     borderColor: 'green',
-    textAlign: 'center'
+    textAlign: 'center',
+    textAlignVertical: 'center'
   },
   upperSeparator: {
     position: 'absolute',
     height: separatorSize,
-    backgroundColor: 'purple',
+    backgroundColor: '#4DB6AC',
     left: marginHorizontal,
     right: marginHorizontal,
   },
   lowerSeparator: {
     position: 'absolute',
     height: separatorSize,
-    backgroundColor: 'purple',
+    backgroundColor: '#4DB6AC',
     left: marginHorizontal,
     right: marginHorizontal,
   },
@@ -62,50 +53,51 @@ const getSeparatorPosition = (visibleItem, visibleHeight, itemSize) => {
 }
 
 class App extends Component {
-  render() {
+  constructor(props) {
+    super(props)
     const pos = getSeparatorPosition(visibleItem, visibleHeight, itemSize)
-    const separatorStartIndex = Math.trunc(pos.upperSeparatorPosition / itemSize)
+    const { upperSeparatorPosition, lowerSeparatorPosition } = pos
+    const separatorStartIndex = Math.trunc(upperSeparatorPosition / itemSize)
     const separatorEndIndex = separatorStartIndex + 1
     const topSpaceItem = visibleItem - separatorEndIndex
     const bottomSpaceItem = separatorStartIndex
-    console.log('visible', DATA.slice(0, visibleItem))
-    console.log('hidden', DATA.slice(visibleItem))
+    this.state = {
+      upperSeparatorPosition,
+      lowerSeparatorPosition,
+      topSpaceItem,
+      bottomSpaceItem
+    }
+
+  }
+  renderItem = (value, index) => {
+    return <Text key={`visible${index}`} style={styles.item}>{value}</Text>
+  }
+  render() {
+    const { upperSeparatorPosition, lowerSeparatorPosition, topSpaceItem, bottomSpaceItem } = this.state
     return (
       <View style={{ flexDirection: 'column', justifyContent: 'flex-end', flex: 1 }}>
-        <View style={{ height: visibleHeight }}>
-          <View style={[styles.upperSeparator, { top: pos.upperSeparatorPosition }]} />
-          <View style={[styles.lowerSeparator, { top: pos.lowerSeparatorPosition }]} />
+        <View style={{ height: visibleHeight, backgroundColor: '#ECEFF0' }}>
+
+          <View style={[styles.upperSeparator, { top: upperSeparatorPosition }]} />
+          <View style={[styles.lowerSeparator, { top: lowerSeparatorPosition }]} />
           <ScrollView
-            decelerationRate={0.999}
+            decelerationRate={"normal"}
+            snapToStart={false}
             snapToInterval={itemSize}
-            contentContainerStyle={{
-              borderColor: 'red',
-              borderWidth: 2,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+          >
             {
               [...Array(bottomSpaceItem).keys()].map((index) => {
                 return <View key={`bottom${index}`} style={styles.item} />
               })
             }
-
             {
-              DATA.slice(0, visibleItem).map((value, index) => {
-                return <Text key={`visible${index}`} style={styles.item}>{value}</Text>
-              })
-            }
-            {
-              DATA.slice(visibleItem).map((value, index) => {
-                return <Text key={`hidden${index}`} style={styles.item}>{value}</Text>
-              })
+              DATA.map(this.renderItem)
             }
             {
               [...Array(topSpaceItem).keys()].map((index) => {
                 return <View key={`top${index}`} style={styles.item} />
               })
             }
-
           </ScrollView>
         </View>
       </View >
