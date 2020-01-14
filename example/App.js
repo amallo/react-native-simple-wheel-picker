@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, View, StyleSheet } from 'react-native';
+import { ScrollView, Text, View, StyleSheet, Animated, TextInput } from 'react-native';
 
 const itemSize = 40;
 const countItem = 100;
@@ -65,25 +65,48 @@ class App extends Component {
       upperSeparatorPosition,
       lowerSeparatorPosition,
       topSpaceItem,
-      bottomSpaceItem
+      bottomSpaceItem,
+      indexSelected: 0
     }
 
   }
-  renderItem = (value, index) => {
-    return <Text key={`visible${index}`} style={styles.item}>{value}</Text>
+  renderItem = (indexSelected) => (value, index) => {
+    const fontWeight = indexSelected === index ? 'bold' : 'normal'
+    return <Text key={`visible${index}`} style={[styles.item, { fontWeight }]} >{value}</Text>
+  }
+  doOnScroll = ({ nativeEvent }) => {
+    const scrollPosition = nativeEvent.contentOffset.y
+    this.setState({
+      indexSelected: Math.round(scrollPosition / itemSize)
+    })
+  }
+  doOnSelectItemIndex = (itemIndex) => {
+    const indexSelected = parseInt(itemIndex)
+    this.setState({
+      indexSelected
+    })
+    const scrollPosition = indexSelected * itemSize
+    this.scrollView.scrollTo({ x: 0, y: scrollPosition })
   }
   render() {
-    const { upperSeparatorPosition, lowerSeparatorPosition, topSpaceItem, bottomSpaceItem } = this.state
+    const { upperSeparatorPosition, lowerSeparatorPosition, topSpaceItem, bottomSpaceItem, indexSelected } = this.state
     return (
       <View style={{ flexDirection: 'column', justifyContent: 'flex-end', flex: 1 }}>
+        <Text>Top upper separator position: {upperSeparatorPosition}</Text>
+        <Text>Top bottom separator position: {lowerSeparatorPosition}</Text>
+        <Text>Index selected: {indexSelected}</Text>
+        <TextInput placeholder={'Item size'} style={{ borderWidth: 1 }} value={indexSelected} onChangeText={this.doOnSelectItemIndex} />
         <View style={{ height: visibleHeight, backgroundColor: '#ECEFF0' }}>
-
           <View style={[styles.upperSeparator, { top: upperSeparatorPosition }]} />
           <View style={[styles.lowerSeparator, { top: lowerSeparatorPosition }]} />
           <ScrollView
-            decelerationRate={"normal"}
+            ref={(ref) => {
+              this.scrollView = ref
+            }}
+            decelerationRate={"fast"}
             snapToStart={false}
             snapToInterval={itemSize}
+            onScroll={this.doOnScroll}
           >
             {
               [...Array(bottomSpaceItem).keys()].map((index) => {
@@ -91,7 +114,7 @@ class App extends Component {
               })
             }
             {
-              DATA.map(this.renderItem)
+              DATA.map(this.renderItem(indexSelected))
             }
             {
               [...Array(topSpaceItem).keys()].map((index) => {
