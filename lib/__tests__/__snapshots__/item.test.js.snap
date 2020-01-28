@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "height": undefined,
+      "opacity": 1,
+    }
+  }
+  testID="container-item"
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "textAlign": "center",
+          "textAlignVertical": "center",
+        },
+        Object {
+          "fontWeight": "normal",
+        },
+      ]
+    }
+    testID="text-item"
+  />
+</View>
+`;

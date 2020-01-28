@@ -8,6 +8,7 @@
 
 import React, { Component } from 'react';
 import { ScrollView, Text, View, StyleSheet } from 'react-native';
+import { WheelPicker } from "./lib"
 
 const itemSize = 40
 const styles = StyleSheet.create({
@@ -34,44 +35,16 @@ const styles = StyleSheet.create({
     top: (itemSize * 5) + itemSize,
   }
 })
+const countItem = 12
+const DATA = [...Array(countItem).keys()].map((index) => `P${index}`)
 
 class App extends Component {
   render() {
     return (
-      <View style={{ height: 400 }}>
-        <View style={styles.upperSeparator} />
-        <View style={styles.lowerSeparator} />
-        <ScrollView
-          decelerationRate={0.999}
-          snapToInterval={itemSize}
-          contentContainerStyle={{
-            borderColor: 'red',
-            borderWidth: 2,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <View style={styles.item} />
-          <View style={styles.item} />
-          <View style={styles.item} />
-          <View style={styles.item} />
-          <View style={styles.item} />
-
-          <Text style={styles.item}>Choose</Text>
-          <Text style={styles.item}>Portugal</Text>
-          <Text style={styles.item}>England</Text>
-          <Text style={styles.item}>Portugal</Text>
-          <Text style={styles.item}>England</Text>
-          <Text style={styles.item}>Portugal</Text>
-          <Text style={styles.item}>England</Text>
-          <Text style={styles.item}>Portugal</Text>
-          <Text style={styles.item}>England</Text>
-          <Text style={styles.item}>England</Text>
-
-          <View style={styles.item} />
-          <View style={styles.item} />
-          <View style={styles.item} />
-          <View style={styles.item} />
-        </ScrollView>
+      <View style={{ flex: 1, justifyContent: 'flex-end' }}>
+        <View style={{ borderWidth: 1 }}>
+          <WheelPicker itemHeight={40} countVisibleItems={10} items={DATA} />
+        </View>
       </View>
     );
   }

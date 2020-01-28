@@ -1,6 +1,4 @@
-/**
- * @format
- */
-import WheelPicker from './lib/wheel-picker';
+import { AppRegistry } from 'react-native'
+import App from './App'
 
-export {WheelPicker};
+AppRegistry.registerComponent('RNWheelPicker', () => App)
