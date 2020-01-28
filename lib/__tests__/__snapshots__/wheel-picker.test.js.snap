@@ -4,256 +4,84 @@ exports[`renders snapshot 1`] = `
 <View
   style={
     Object {
-      "height": 400,
+      "height": 200,
     }
   }
+  testID="container"
 >
   <View
     style={
-      Object {
-        "backgroundColor": "purple",
-        "height": 5,
-        "left": 40,
-        "position": "absolute",
-        "right": 40,
-        "top": 200,
-      }
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "backgroundColor": "#4DB6AC",
+          "height": 1,
+          "left": 20,
+          "right": 20,
+          "top": 120,
+        },
+      ]
     }
+    testID="floatingSeparatorView"
   />
   <View
     style={
-      Object {
-        "backgroundColor": "purple",
-        "height": 5,
-        "left": 40,
-        "position": "absolute",
-        "right": 40,
-        "top": 240,
-      }
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "backgroundColor": "#4DB6AC",
+          "height": 1,
+          "left": 20,
+          "right": 20,
+          "top": 160,
+        },
+      ]
     }
+    testID="floatingSeparatorView"
   />
   <RCTScrollView
-    contentContainerStyle={
-      Object {
-        "alignItems": "center",
-        "borderColor": "red",
-        "borderWidth": 2,
-        "justifyContent": "center",
-      }
-    }
-    decelerationRate={0.999}
+    decelerationRate="fast"
+    onScroll={[Function]}
     snapToInterval={40}
+    snapToStart={false}
+    testID="scrollView"
   >
     <View>
       <View
         style={
           Object {
-            "borderColor": "green",
-            "borderWidth": 1,
             "height": 40,
-            "textAlign": "center",
           }
         }
+        testID="scrollerView"
       />
       <View
         style={
           Object {
-            "borderColor": "green",
-            "borderWidth": 1,
             "height": 40,
-            "textAlign": "center",
           }
         }
+        testID="scrollerView"
       />
       <View
         style={
           Object {
-            "borderColor": "green",
-            "borderWidth": 1,
             "height": 40,
-            "textAlign": "center",
           }
         }
+        testID="scrollerView"
       />
       <View
         style={
           Object {
-            "borderColor": "green",
-            "borderWidth": 1,
             "height": 40,
-            "textAlign": "center",
           }
         }
-      />
-      <View
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      />
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        Choose
-      </Text>
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        Portugal
-      </Text>
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        England
-      </Text>
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        Portugal
-      </Text>
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        England
-      </Text>
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        Portugal
-      </Text>
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        England
-      </Text>
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        Portugal
-      </Text>
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        England
-      </Text>
-      <Text
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      >
-        England
-      </Text>
-      <View
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "borderColor": "green",
-            "borderWidth": 1,
-            "height": 40,
-            "textAlign": "center",
-          }
-        }
+        testID="scrollerView"
       />
     </View>
   </RCTScrollView>

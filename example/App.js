@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, View, StyleSheet, Animated, TextInput } from 'react-native';
+import { ScrollView, Text, View, StyleSheet, TextInput } from 'react-native';
+//import { WheelPicker } from 'react-native-simple-wheel-picker'
 
 const itemSize = 40;
-const countItem = 100;
-const visibleItem = 4;
+const countItem = 30;
+const visibleItem = 10;
 const marginHorizontal = 20
 const visibleHeight = visibleItem * itemSize;
 const separatorSize = 1
@@ -58,8 +59,7 @@ class App extends Component {
     const pos = getSeparatorPosition(visibleItem, visibleHeight, itemSize)
     const { upperSeparatorPosition, lowerSeparatorPosition } = pos
     const separatorStartIndex = Math.trunc(upperSeparatorPosition / itemSize)
-    const separatorEndIndex = separatorStartIndex + 1
-    const topSpaceItem = visibleItem - separatorEndIndex
+    const topSpaceItem = visibleItem - (separatorStartIndex + 1)
     const bottomSpaceItem = separatorStartIndex
     this.state = {
       upperSeparatorPosition,
@@ -129,3 +129,4 @@ class App extends Component {
 }
 
 export default App;
+
