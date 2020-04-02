@@ -4,6 +4,7 @@ exports[`renders snapshot 1`] = `
 <View
   style={
     Object {
+      "backgroundColor": undefined,
       "height": 200,
     }
   }
