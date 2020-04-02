@@ -16,6 +16,7 @@ exports[`renders a snapshot 1`] = `
     Object {
       "backgroundColor": undefined,
       "height": undefined,
+      "justifyContent": "center",
       "opacity": 1,
     }
   }
@@ -29,6 +30,7 @@ exports[`renders a snapshot 1`] = `
           "textAlignVertical": "center",
         },
         Object {
+          "color": "#ADADAD",
           "fontWeight": "normal",
         },
       ]

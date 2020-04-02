@@ -43,7 +43,7 @@ class App extends Component {
     return (
       <View style={{ flex: 1, justifyContent: 'flex-end' }}>
         <View style={{ borderWidth: 1 }}>
-          <WheelPicker itemHeight={40} countVisibleItems={10} items={DATA} />
+          <WheelPicker itemHeight={40} countVisibleItems={5} items={DATA} backgroundColor={'#ECEFF0'} />
         </View>
       </View>
     );
