@@ -47,6 +47,8 @@ exports[`renders snapshot 1`] = `
   <RCTScrollView
     decelerationRate="fast"
     onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
     snapToInterval={40}
     snapToStart={false}
     testID="scrollView"
