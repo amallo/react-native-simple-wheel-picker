@@ -6,8 +6,8 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import { ScrollView, Text, View, StyleSheet } from 'react-native';
+import React, { useState, useCallback } from 'react';
+import { TextInput, View, StyleSheet } from 'react-native';
 import { WheelPicker } from "./lib"
 
 const itemSize = 40
@@ -37,17 +37,31 @@ const styles = StyleSheet.create({
 })
 const countItem = 12
 const DATA = [...Array(countItem).keys()].map((index) => `P${index}`)
+const App = () => {
+  const [index, setIndex] = useState(0)
 
-class App extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'flex-end' }}>
-        <View style={{ borderWidth: 1 }}>
-          <WheelPicker itemHeight={40} countVisibleItems={5} items={DATA} backgroundColor={'#ECEFF0'} />
-        </View>
+  const onChangeIndex = useCallback((index) => {
+    if (isNaN(index)) {
+      setIndex(0)
+    }
+    else {
+      setIndex(index)
+    }
+  })
+
+  return (
+    <View style={{ flex: 1, justifyContent: 'flex-end' }}>
+      <TextInput style={{ borderWidth: 1, margin: 20 }} value={index ? index.toString() : ''} onChangeText={(index) => onChangeIndex(parseInt(index))} />
+      <View style={{ borderWidth: 1 }}>
+        <WheelPicker itemHeight={40} countVisibleItems={5}
+          onSelected={onChangeIndex}
+          selectedIndex={index}
+          items={DATA}
+          backgroundColor={'#ECEFF0'} />
       </View>
-    );
-  }
+    </View>
+  )
+
 }
 
 export default App;
