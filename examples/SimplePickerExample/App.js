@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback } from 'react';
 import { TextInput, View, Text, ScrollView, StyleSheet } from 'react-native';
-import { WheelPicker } from "./lib"
+import { WheelPicker } from "react-native-simple-wheel-picker"
 
 const useOnChangeNumber = (setFn, minimum = 0) => {
   const onChangeNumber = useCallback((index) => {
