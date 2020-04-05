@@ -1,62 +1,63 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+
 
 import React, { useState, useCallback } from 'react';
-import { TextInput, View, StyleSheet } from 'react-native';
+import { TextInput, View, Text, ScrollView } from 'react-native';
 import { WheelPicker } from "./lib"
 
-const itemSize = 40
-const styles = StyleSheet.create({
-  item: {
-    height: itemSize,
-    borderWidth: 1,
-    borderColor: 'green',
-    textAlign: 'center'
-  },
-  upperSeparator: {
-    position: 'absolute',
-    height: 5,
-    backgroundColor: 'purple',
-    top: itemSize * 5,
-    left: itemSize,
-    right: itemSize
-  },
-  lowerSeparator: {
-    position: 'absolute',
-    height: 5,
-    backgroundColor: 'purple',
-    left: 40,
-    right: 40,
-    top: (itemSize * 5) + itemSize,
-  }
-})
-const countItem = 12
-const DATA = [...Array(countItem).keys()].map((index) => `P${index}`)
-const App = () => {
-  const [index, setIndex] = useState(0)
-
-  const onChangeIndex = useCallback((index) => {
-    if (isNaN(index)) {
-      setIndex(0)
+const useOnChangeNumber = (setFn, minimum = 0) => {
+  const onChangeNumber = useCallback((index) => {
+    const result = parseInt(index)
+    if (isNaN(result)) {
+      setFn(minimum)
     }
     else {
-      setIndex(index)
+      setFn(result)
     }
   })
+  return [onChangeNumber]
+}
+
+
+const App = () => {
+
+  const [index, setIndex] = useState(0)
+  const [countItem, setCountItem] = useState(12)
+  const [countVisibleItems, setCountVisibleItems] = useState(5)
+  const [itemHeight, setItemHeight] = useState(40)
+
+  const [onChangeIndex] = useOnChangeNumber(setIndex)
+  const [onChangeGenerateData] = useOnChangeNumber(setCountItem)
+  const [onChangeCountVisibleItems] = useOnChangeNumber(setCountVisibleItems)
+  const [onChangeItemHeight] = useOnChangeNumber(setItemHeight)
+
+  const items = [...Array(countItem).keys()].map((index) => `P${index}`)
 
   return (
     <View style={{ flex: 1, justifyContent: 'flex-end' }}>
-      <TextInput style={{ borderWidth: 1, margin: 20 }} value={index ? index.toString() : ''} onChangeText={(index) => onChangeIndex(parseInt(index))} />
+      <ScrollView>
+        <View>
+          <Text>Height of each item</Text>
+          <TextInput style={{ borderWidth: 1, margin: 20 }} keyboardType={'numeric'} placeholder={'Visible items'} value={itemHeight ? itemHeight.toString() : ''} onChangeText={onChangeItemHeight} />
+        </View>
+        <View>
+          <Text>Number Visible items (min: 2)</Text>
+          <TextInput style={{ borderWidth: 1, margin: 20 }} keyboardType={'numeric'} placeholder={'Visible items'} value={countVisibleItems ? countVisibleItems.toString() : ''} onChangeText={onChangeCountVisibleItems} />
+        </View>
+        <View>
+          <Text>Generate data</Text>
+          <TextInput style={{ borderWidth: 1, margin: 20 }} keyboardType={'numeric'} placeholder={'Generate data'} value={countItem ? countItem.toString() : ''} onChangeText={onChangeGenerateData} />
+        </View>
+        <View>
+          <Text>Selected index</Text>
+          <TextInput style={{ borderWidth: 1, margin: 20 }} keyboardType={'numeric'} placeholder={'Selected index'} value={index ? index.toString() : ''} onChangeText={onChangeIndex} />
+        </View>
+      </ScrollView>
       <View style={{ borderWidth: 1 }}>
-        <WheelPicker itemHeight={40} countVisibleItems={5}
+        <WheelPicker itemHeight={itemHeight < 1 ? undefined : itemHeight}
+          countVisibleItems={countVisibleItems < 2 ? 2 : countVisibleItems}
           onSelected={onChangeIndex}
           selectedIndex={index}
-          items={DATA}
+          items={items}
           backgroundColor={'#ECEFF0'} />
       </View>
     </View>
