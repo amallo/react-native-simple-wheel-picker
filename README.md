@@ -1,12 +1,10 @@
 # React Native Simple Wheel Picker
 
-[![Build Status][build-badge]][build]
-[![Version][version-badge]][package]
 [![MIT License][license-badge]][license]
 
 A cross-platform wheel picker component for React Native in pure Javascript.
 
-- Checkout the [example/](https://github.com/react-native-community/react-native-tab-view/tree/master/example) folder for source code.
+- Checkout the [example/](https://github.com/amallo/react-native-simple-wheel-picker/tree/master/examples/SimplePickerExample) folder for source code.
 
 ## Demo
 
