@@ -79,9 +79,6 @@ export default App;
 
 ```
 
-[Try this example on Snack](https://snack.expo.io/@satya164/react-native-tab-view-quick-start)
-
-
 
 ## API reference
 
