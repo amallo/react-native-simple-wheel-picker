@@ -132,7 +132,19 @@ An array of string items that needs to be displayed. This array can be updated a
 />
 ```
 
-You need to extract the corresponding value using the `selectedIndex` property.
+You need to extract the corresponding value using the `selectedIndex` property, eg:
+
+```js
+const [data, setData] = useState(["A", "B", "C"])
+<TextInput value={data[index]} />
+<WheelPicker
+  onSelected={setIndex}
+  selectedIndex={index}
+  items={data}
+/>
+```
+
+
 
 ##### backgroundColor (`optional`)
 
