@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "height": 200,
+    }
+  }
+  testID="container"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "backgroundColor": "#4DB6AC",
+          "height": 1,
+          "left": 20,
+          "right": 20,
+          "top": 120,
+        },
+      ]
+    }
+    testID="floatingSeparatorView"
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "backgroundColor": "#4DB6AC",
+          "height": 1,
+          "left": 20,
+          "right": 20,
+          "top": 160,
+        },
+      ]
+    }
+    testID="floatingSeparatorView"
+  />
+  <RCTScrollView
+    decelerationRate="fast"
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    snapToInterval={40}
+    snapToStart={false}
+    testID="scrollView"
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "height": 40,
+          }
+        }
+        testID="scrollerView"
+      />
+      <View
+        style={
+          Object {
+            "height": 40,
+          }
+        }
+        testID="scrollerView"
+      />
+      <View
+        style={
+          Object {
+            "height": 40,
+          }
+        }
+        testID="scrollerView"
+      />
+      <View
+        style={
+          Object {
+            "height": 40,
+          }
+        }
+        testID="scrollerView"
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;

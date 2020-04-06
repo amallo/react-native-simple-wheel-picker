@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "position": "absolute",
+      },
+      Object {
+        "backgroundColor": "red",
+        "height": 40,
+        "left": 40,
+        "right": 40,
+        "top": 200,
+      },
+    ]
+  }
+  testID="floatingSeparatorView"
+/>
+`;
