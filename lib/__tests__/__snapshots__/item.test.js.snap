@@ -29,10 +29,7 @@ exports[`renders a snapshot 1`] = `
           "textAlign": "center",
           "textAlignVertical": "center",
         },
-        Object {
-          "color": "#ADADAD",
-          "fontWeight": "normal",
-        },
+        undefined,
         undefined,
       ]
     }

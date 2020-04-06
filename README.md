@@ -166,6 +166,16 @@ Define the size of the separators. Default value is `1`.
 
 Define the text style of each displayed item. Default value is `undefined`.
 
+##### selectedItemTextStyle (`optional`)
+
+Define the text style of each selected item. Default value is `{ fontWeight: 'bold', color: '#37474F' }`.
+
+##### unselectedItemTextStyle (`optional`)
+
+Define the text style of each selected item. Default value is `{ fontWeight: 'normal', color: '#ADADAD' }`.
+
+
+
 ## Contributing
 
 While developing, you can run the example app to test your changes.
