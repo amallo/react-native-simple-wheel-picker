@@ -33,6 +33,7 @@ exports[`renders a snapshot 1`] = `
           "color": "#ADADAD",
           "fontWeight": "normal",
         },
+        undefined,
       ]
     }
     testID="text-item"

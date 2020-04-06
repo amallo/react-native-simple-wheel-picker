@@ -150,6 +150,10 @@ Define the horizontal margin of the separators. Default value is `20`.
 
 Define the size of the separators. Default value is `1`.
 
+##### itemTextStyle (`optional`)
+
+Define the text style of each displayed item. Default value is `undefined`.
+
 ## Contributing
 
 While developing, you can run the example app to test your changes.
