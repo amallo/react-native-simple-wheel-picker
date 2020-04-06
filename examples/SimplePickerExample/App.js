@@ -55,15 +55,13 @@ const App = () => {
           <TextInput style={styles.input} keyboardType={'numeric'} placeholder={'Selected index'} value={'' + index || ''} onChangeText={onChangeIndex} />
         </View>
       </ScrollView>
-      <View style={{ borderWidth: 1 }}>
-        <WheelPicker
-          itemHeight={itemHeight <= 0 ? undefined : itemHeight}
-          countVisibleItems={countVisibleItems < 2 ? 2 : countVisibleItems}
-          onSelected={onChangeIndex}
-          selectedIndex={index}
-          items={items}
-          backgroundColor={'#ECEFF0'} />
-      </View>
+      <WheelPicker
+        itemHeight={itemHeight <= 0 ? undefined : itemHeight}
+        countVisibleItems={countVisibleItems < 2 ? 2 : countVisibleItems}
+        onSelected={onChangeIndex}
+        selectedIndex={index}
+        items={items}
+        backgroundColor={'#ECEFF0'} />
     </View>
   )
 
