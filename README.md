@@ -132,7 +132,19 @@ An array of string items that needs to be displayed. This array can be updated a
 />
 ```
 
-You need to extract the corresponding value using the `selectedIndex` property.
+You need to extract the corresponding value using the `selectedIndex` property, eg:
+
+```js
+const [data, setData] = useState(["A", "B", "C"])
+<TextInput value={data[index]} />
+<WheelPicker
+  onSelected={setIndex}
+  selectedIndex={index}
+  items={data}
+/>
+```
+
+
 
 ##### backgroundColor (`optional`)
 
@@ -149,6 +161,20 @@ Define the horizontal margin of the separators. Default value is `20`.
 ##### separatorHeight (`optional`)
 
 Define the size of the separators. Default value is `1`.
+
+##### itemTextStyle (`optional`)
+
+Define the text style of each displayed item. Default value is `undefined`.
+
+##### selectedItemTextStyle (`optional`)
+
+Define the text style of each selected item. Default value is `{ fontWeight: 'bold', color: '#37474F' }`.
+
+##### unselectedItemTextStyle (`optional`)
+
+Define the text style of each selected item. Default value is `{ fontWeight: 'normal', color: '#ADADAD' }`.
+
+
 
 ## Contributing
 

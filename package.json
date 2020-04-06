@@ -6,6 +6,11 @@
     "lint": "eslint ."
   },
   "main": "./lib/index.js",
+  "author": "Audie MALLOGGIA <audie@app2b.io> (https://github.com/amallo/)",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/runtime": "^7.6.2",
