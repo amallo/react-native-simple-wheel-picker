@@ -1,5 +1,6 @@
 # React Native Simple Wheel Picker
 
+[![Version][version-badge]][package]
 [![MIT License][license-badge]][license]
 
 A cross-platform wheel picker component for React Native in pure Javascript.
@@ -22,7 +23,7 @@ We're done! Now you can build and run the app on your device/simulator.
 
 ## Quick Start
 
-```react
+```js
 
 import React, { useState, useCallback } from 'react';
 import { TextInput, View, Text, ScrollView, StyleSheet } from 'react-native';
@@ -111,7 +112,7 @@ Container component responsible for rendering and managing tabs. Follows materia
 
 Basic usage look like this:
 
-```react
+```js
 <WheelPicker
   onSelected={setIndex}
   selectedIndex={index}
@@ -135,7 +136,7 @@ This is the current selected index that needs to be updated when the picker chan
 
 Height of each item of the picker needs to be upper to zero. The global height of the container depends on the height of each item. 
 
-```react
+```js
 <WheelPicker
   onSelected={setIndex}
   selectedIndex={index}
@@ -147,7 +148,7 @@ Height of each item of the picker needs to be upper to zero. The global height o
 
 The minimum number of visible items to be displayed. The global height of the container depends on the number of visible items. Default value is `2`
 
-```react
+```js
 <WheelPicker
   onSelected={setIndex}
   selectedIndex={index}
@@ -159,7 +160,7 @@ The minimum number of visible items to be displayed. The global height of the co
 
 An array of string items that needs to be displayed. Default value is `[]`. This array can be updated any time, the picker will refresh its content according to the new array.
 
-```react
+```js
 <WheelPicker
   onSelected={setIndex}
   selectedIndex={index}
@@ -183,5 +184,7 @@ Remember to add tests for your change.
 
 <!-- badges -->
 
+[version-badge]: https://img.shields.io/npm/v/react-native-simple-wheel-picker.svg?style=flat-square
 [package]: https://www.npmjs.com/package/react-native-simple-wheel-picker
+[license-badge]: https://img.shields.io/npm/l/react-native-simple-wheel-picker.svg?style=flat-square
 [license]: https://opensource.org/licenses/MIT
