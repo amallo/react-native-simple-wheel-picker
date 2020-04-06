@@ -3,7 +3,7 @@
 exports[`renders a snapshot 1`] = `
 <View
   accessible={true}
-  focusable={false}
+  clickable={false}
   isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
