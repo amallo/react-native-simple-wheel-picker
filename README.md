@@ -37,7 +37,7 @@ const App = () => {
   const onChangeIndex = useCallback((index) => {
     const result = parseInt(index)
     if (isNaN(result)) {
-      setIndex(minimum)
+      setIndex(0)
     }
     else {
       setIndex(result)
@@ -48,7 +48,7 @@ const App = () => {
 
   return (
     <View style={{ flex: 1, justifyContent: 'flex-end' }}>
-      <TextInput style={styles.input} keyboardType={'numeric'} placeholder={'Selected index'} value={'' + index || ''} onChangeText={onChangeIndex} />
+      <TextInput style={styles.input} keyboardType={'numeric'} value={'' + index || ''} onChangeText={onChangeIndex} />
       <WheelPicker
         onSelected={onChangeIndex}
         selectedIndex={index}
