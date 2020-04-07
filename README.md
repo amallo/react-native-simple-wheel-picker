@@ -48,11 +48,7 @@ const App = () => {
 
   return (
     <View style={{ flex: 1, justifyContent: 'flex-end' }}>
-      <ScrollView style={{ backgroundColor: 'white' }}>
-        <View>
-          <TextInput style={styles.input} keyboardType={'numeric'} placeholder={'Selected index'} value={'' + index || ''} onChangeText={onChangeIndex} />
-        </View>
-      </ScrollView>
+      <TextInput style={styles.input} keyboardType={'numeric'} placeholder={'Selected index'} value={'' + index || ''} onChangeText={onChangeIndex} />
       <WheelPicker
         onSelected={onChangeIndex}
         selectedIndex={index}
@@ -76,7 +72,7 @@ Container component responsible for rendering and the wheel picker.
 
 Basic usage look like this:
 
-```js
+```jsx
 <WheelPicker
   onSelected={setIndex}
   selectedIndex={index}
@@ -100,7 +96,7 @@ This is the current selected index that needs to be updated when the picker chan
 
 Height of each item of the picker needs to be upper to zero. The global height of the container depends on the height of each item. Default value is `40`.
 
-```js
+```jsx
 <WheelPicker
   onSelected={setIndex}
   selectedIndex={index}
@@ -112,7 +108,7 @@ Height of each item of the picker needs to be upper to zero. The global height o
 
 The minimum number of visible items to be displayed. The global height of the container depends on the number of visible items. Default value is `2`
 
-```js
+```jsx
 <WheelPicker
   onSelected={setIndex}
   selectedIndex={index}
@@ -124,7 +120,7 @@ The minimum number of visible items to be displayed. The global height of the co
 
 An array of string items that needs to be displayed. This array can be updated any time, the picker will refresh its content according to the new array. Default value is `[]`.
 
-```js
+```jsx
 <WheelPicker
   onSelected={setIndex}
   selectedIndex={index}
@@ -134,7 +130,7 @@ An array of string items that needs to be displayed. This array can be updated a
 
 You need to extract the corresponding value using the `selectedIndex` property, eg:
 
-```js
+```jsx
 const [data, setData] = useState(["A", "B", "C"])
 <TextInput value={data[index]} />
 <WheelPicker
