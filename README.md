@@ -23,7 +23,7 @@ We're done! Now you can build and run the app on your device/simulator.
 
 ## Quick Start
 
-```js
+```jsx
 import React, { useState, useCallback } from 'react';
 import { TextInput, View, Text, ScrollView, StyleSheet } from 'react-native';
 import { WheelPicker } from "react-native-simple-wheel-picker"
