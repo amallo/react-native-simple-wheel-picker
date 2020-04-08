@@ -1,0 +1,6 @@
+module.exports = {
+  hooks: {
+    "pre-commit": "npm test",
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  }
+};
