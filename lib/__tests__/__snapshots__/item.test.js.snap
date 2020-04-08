@@ -2,6 +2,7 @@
 
 exports[`renders a snapshot 1`] = `
 <View
+  accessibilityLabel="picker_item:undefined"
   accessible={true}
   clickable={false}
   isTVSelectable={true}

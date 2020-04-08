@@ -7,6 +7,12 @@ A cross-platform wheel picker component for React Native in pure Javascript.
 
 - Checkout the [example/](https://github.com/amallo/react-native-simple-wheel-picker/tree/master/examples/SimplePickerExample) folder for source code.
 
+## Features
+
+- 100% Javascript
+- Highly customizable
+- Provides accesibility labels
+
 ## Demo
 
 <img src="https://github.com/amallo/react-native-simple-wheel-picker/blob/master/demo.gif" width="360" />
@@ -170,7 +176,15 @@ Define the text style of each selected item. Default value is `{ fontWeight: 'bo
 
 Define the text style of each selected item. Default value is `{ fontWeight: 'normal', color: '#ADADAD' }`.
 
+## Accessibility labels
 
+The component provides some accessilibility labels, the general format is `picker:<accessibility label>`
+
+##### Items of the picker
+
+![picker_item](https://github.com/amallo/react-native-simple-wheel-picker/tree/master/screenshots/picker_item.png)
+
+Accessibility label for `This is item 0` would be `picker:This is item 0`
 
 ## Contributing
 
