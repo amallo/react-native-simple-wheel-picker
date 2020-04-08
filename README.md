@@ -182,7 +182,7 @@ The component provides some accessilibility labels, the general format is `picke
 
 ##### Items of the picker
 
-![picker_item](https://github.com/amallo/react-native-simple-wheel-picker/tree/master/screenshots/picker_item.png)
+![picker_item](https://github.com/amallo/react-native-simple-wheel-picker/blob/master/screenshots/picker_item.png)
 
 Accessibility label for `This is item 0` would be `picker:This is item 0`
 
