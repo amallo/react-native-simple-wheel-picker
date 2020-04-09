@@ -176,15 +176,21 @@ Define the text style of each selected item. Default value is `{ fontWeight: 'bo
 
 Define the text style of each selected item. Default value is `{ fontWeight: 'normal', color: '#ADADAD' }`.
 
-## Accessibility labels
+##### accessibilityLabel (`optional`)
 
-The component provides some accessilibility labels, the general format is `picker:<accessibility label>`
+Define an accessibility for the wheel picker. This accessibility label will be used as an identifier for the container and as prefix identifier for each item. Default value is `wheel_picker`.
 
-##### Items of the picker
+```jsx
+<WheelPicker
+  accessibilityLabel={'wonderful_picker'}
+  items={["This is item 0", "This is item 1"]}
+/>
+```
 
+Example : 
 ![picker_item](https://github.com/amallo/react-native-simple-wheel-picker/tree/master/screenshots/picker_item.png)
 
-Accessibility label for `This is item 0` would be `picker:This is item 0`
+Accessibility label for `This is item 0` would be `wonderful_picker:This is item 0`
 
 ## Contributing
 

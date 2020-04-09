@@ -2,6 +2,7 @@
 
 exports[`renders snapshot 1`] = `
 <View
+  accessibilityLabel="wheel_picker"
   style={
     Object {
       "backgroundColor": undefined,
