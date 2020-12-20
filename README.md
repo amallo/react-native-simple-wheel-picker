@@ -15,7 +15,7 @@ A cross-platform wheel picker component for React Native in pure Javascript.
 
 ## Demo
 
-<img src="https://github.com/amallo/react-native-simple-wheel-picker/blob/master/demo.gif" width="360" />
+<img src="https://github.com/amallo/react-native-simple-wheel-picker/blob/master/screenshots/demo.gif" width="360" />
 
 ## Installation
 
